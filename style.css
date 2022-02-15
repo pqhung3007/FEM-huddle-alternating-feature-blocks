@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap");
 :root {
   --pink: #ff52bf;
+  --pink-hover: #e04ba9;
   --very-pale-cyan: #ebfbff;
   --very-dark-cyan: #00252e;
   --grayish-blue: #808d99;
@@ -15,7 +16,6 @@
 header {
   position: relative;
   width: 100%;
-  height: 100vh;
   background-color: var(--very-pale-cyan);
   font-family: "Poppins", sans-serif;
 }
@@ -76,6 +76,11 @@ nav {
   color: #fff;
 }
 
+.btn-cta:hover {
+  background-color: var(--pink-hover);
+  transition: all 0.2s ease-in;
+}
+
 .header-image {
   margin-top: 3rem;
 }
@@ -93,6 +98,7 @@ main {
 
 .card {
   border-radius: 10px;
+  border: 2px solid rgb(216, 213, 213);
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   padding: 2rem 1rem;
   width: 80%;
@@ -103,7 +109,7 @@ main {
 }
 
 .card-image img {
-  width: 50%;
+  width: 60%;
   height: 100%;
 }
 
@@ -124,7 +130,7 @@ main {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 27px 1px rgba(0, 0, 0, 0.3);
-  padding: 2rem 5rem;
+  padding: 2rem;
   transform: translateX(-50%);
   text-align: center;
 }
@@ -179,6 +185,10 @@ main {
   color: white;
 }
 
+.copyright {
+  text-align: center;
+}
+
 .attribution {
   color: #fff;
   text-align: center;
@@ -188,4 +198,65 @@ main {
 .attribution a {
   text-decoration: none;
   color: var(--grayish-blue);
+}
+
+/* DESKTOP SIZE */
+@media (min-width: 768px) {
+  header {
+    height: 100vh;
+  }
+
+  .header-content {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .header-text {
+    text-align: left;
+    margin-right: 2rem;
+    max-width: 32rem;
+  }
+
+  .header-image img {
+    width: 50%;
+    position: absolute;
+    top: 22%;
+  }
+
+  .card {
+    flex-direction: row;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .card:nth-of-type(1),
+  .card:nth-of-type(3) {
+    flex-direction: row-reverse;
+  }
+
+  .card-image img {
+    width: 80%;
+  }
+
+  .card-started {
+    bottom: -20%;
+    min-width: 50%;
+  }
+
+  .footer {
+    padding: 10rem 4rem 2rem;
+  }
+
+  .footer-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: baseline;
+  }
+
+  .copyright {
+    text-align: right;
+  }
 }
