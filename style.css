@@ -88,6 +88,7 @@ main {
   padding: 2rem 0;
   font-family: "Open Sans", sans-serif;
   position: relative;
+  margin-bottom: 10rem;
 }
 
 .card {
@@ -117,22 +118,74 @@ main {
 
 .card-started {
   position: absolute;
-  left: 20%;
-  background-color: var(--very-pale-cyan);
+  left: 50%;
+  bottom: -15%;
+  min-width: 80%;
+  background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0px 0px 27px 1px rgba(0, 0, 0, 0.31);
-  padding: 2rem 1rem;
+  box-shadow: 0px 0px 27px 1px rgba(0, 0, 0, 0.3);
+  padding: 2rem 5rem;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.card-started h1 {
+  margin-bottom: 2rem;
 }
 
 .footer {
   background-color: var(--very-dark-cyan);
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  padding: 10rem 2rem 0;
+}
+
+.contact-item {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  margin-left: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.footer-links a {
+  color: var(--grayish-blue);
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social a {
+  color: var(--grayish-blue);
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-right: 0.8rem;
+  margin-bottom: 2rem;
+  transition: all 0.1s ease-in;
+}
+
+.footer-social a:hover {
+  color: white;
 }
 
 .attribution {
   color: #fff;
   text-align: center;
+  margin-top: 3rem;
 }
 
 .attribution a {
   text-decoration: none;
+  color: var(--grayish-blue);
 }
